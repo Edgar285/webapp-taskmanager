@@ -1,0 +1,49 @@
+{
+  "name": "webapp-taskmanager",
+  "version": "5.0.0",
+  "description": "API REST de gestion de tareas (Node.js + Express + SQLite) con pipeline CI/CD: GitHub Actions, Docker Hub y AWS EC2",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --verbose",
+    "test:coverage": "jest --verbose --coverage",
+    "test:ci": "jest --ci --verbose --coverage",
+    "coverage:summary": "node scripts/coverage-summary.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js"
+    ],
+    "coverageReporters": [
+      "text",
+      "text-summary",
+      "json-summary",
+      "html"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 70,
+        "branches": 70,
+        "functions": 70,
+        "lines": 70
+      }
+    }
+  }
+}

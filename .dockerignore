@@ -1,0 +1,33 @@
+# Dependencias (se instalan dentro de la imagen con npm ci)
+node_modules
+npm-debug.log*
+*.log
+logs
+
+# Datos locales y respaldos (no deben viajar en la imagen)
+data
+backups
+*.db
+
+# Secretos y configuracion local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Pruebas, cobertura y herramientas de desarrollo
+tests
+coverage
+scripts
+cliente_tcp.py
+
+# Control de versiones, CI y editores
+.git
+.gitignore
+.github
+.vscode
+.idea
+*.md
+Dockerfile
+.dockerignore
