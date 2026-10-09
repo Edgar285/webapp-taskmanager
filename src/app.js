@@ -12,7 +12,7 @@ const healthRouter = require('./routes/health');
 // Mensaje de bienvenida de la ruta raiz.
 // Para la demostracion del pipeline basta con cambiar este texto, hacer git push
 // y ver como el nuevo mensaje aparece en http://<IP_EC2>/ sin entrar al servidor.
-const MENSAJE_BIENVENIDA = 'API de gestion de tareas funcionando correctamente';
+const MENSAJE_BIENVENIDA = 'API de tareas desplegada automaticamente con CI/CD';
 
 // La app de Express se construye aqui y se exporta SIN llamar a listen().
 // Asi las pruebas (Supertest) pueden usarla directamente sin abrir un puerto.
