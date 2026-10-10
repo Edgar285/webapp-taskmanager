@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 
   const ok = database === 'ok';
   sendResponse(res, ok ? 200 : 503, {
-    status: ok ? 'ok' : 'degraded',
+    status: ok ? 'ok2' : 'degraded',
     version,
     commit: process.env.GIT_SHA || 'local',
     database,
