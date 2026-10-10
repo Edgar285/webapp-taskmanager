@@ -13,7 +13,7 @@ describe('GET /api/health - estado del servicio', () => {
     const res = await request(app).get('/api/health');
     expect(res.status).toBe(200);
     expect(res.body.statusCode).toBe(200);
-    expect(res.body.data).toMatchObject({ status: 'ok', database: 'ok', version });
+    expect(res.body.data).toMatchObject({ status: 'ok2', database: 'ok', version });
     expect(typeof res.body.data.uptime_s).toBe('number');
     expect(new Date(res.body.data.timestamp).toString()).not.toBe('Invalid Date');
   });
